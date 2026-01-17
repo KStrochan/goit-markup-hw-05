@@ -420,7 +420,25 @@
     </li>
     </ul>
     </div>
+    <div class="footer-container-form">
+      <p class="footer-form-title">Subscribe</p>
+      <form class="footer-form" name="Footer Form" autocomplete="off">
+        <label class="footer-form-label">
+          <input class="footer-form-input"
+            type="email"
+            name="email"
+            required placeholder="E-mail">
+        </label>
+
+        <button class="footer-form-button" type="submit">
+          Subscribe
+          <svg class="footer-form-icon" width="16" height="16">
+            <use href="./images/icons.svg#icon-send-button"></use>
+          </svg>
+        </button>
+      </form>
     </div>
+  </div>
 </footer>
 
 <!-- ===========================================MODAL WINDOW FOR ORDER SERVICE BUTTON============================================= -->
@@ -485,7 +503,15 @@
             class="modal-checkbox" 
             type="checkbox" 
             name="agreement" 
-            required>I accept the terms and conditions of the <a href="">Privacy Policy</a></label>
+            required>
+  <span class="modal-checkbox-custom">
+    <svg class="modal-checkbox-icon" width="10" height="8">
+      <use href="./images/icons.svg#icon-check"></use>
+    </svg>
+  </span>
+  I accept the terms and conditions of the
+  <a class="modal-privacy-link" href="">Privacy Policy</a>
+</label>
         <button class="modal-send-button" type="submit">Send</button>
     </form>
 </body>
