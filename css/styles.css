@@ -779,9 +779,15 @@ position: relative;
     align-items: center;
     justify-content: center;
     padding: 15px;
-    /* visibility: hidden; */
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-hidden.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
 }
 .modal-content {
     position: relative;
@@ -796,7 +802,7 @@ position: relative;
 .modal-label {
     display: flex;
     flex-direction: column;
-    transition: color 150ms ease-in-out;
+    transition: color 250ms ease-in-out;
     color: #8E8F99;
 }
 .modal-input {
@@ -812,7 +818,7 @@ position: relative;
     width: 100%;
 }
 .modal-comment {
-    resize: vertical;
+    resize: none;
     min-height: 100px;
     max-height: 200px;
     border-radius: 4px;
@@ -831,10 +837,9 @@ position: relative;
 }
 .modal-checkbox {
     position: absolute;
-    width: 16px;
-    height: 16px;
+    width: 1px;
+    height: 1px;
     margin: -1px;
-    cursor: pointer;
     border: 0;
     padding: 0;
     clip : rect(0 0 0 0);
