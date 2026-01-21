@@ -795,6 +795,11 @@ position: relative;
     visibility: visible;
     pointer-events: all;
 }
+.modal-field {
+    /* margin-bottom: 8px; */
+    display: flex;
+    flex-direction: column;
+}
 .modal-content {
     position: relative;
     background-color: #ffffff;
