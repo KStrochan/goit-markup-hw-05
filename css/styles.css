@@ -342,7 +342,10 @@ img {
     width: calc((100% - 72px) / 4);
     background-color: #ffffff;
     border-radius: 0 0 4px 4px;
-    /* box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08); */
+    overflow: hidden;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 
 }
 .team-list li h3,
@@ -366,7 +369,7 @@ img {
 }
 .team-card-container {
     padding: 32px 16px;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: none
 }
 .team h3 {
     text-align: center;
@@ -634,6 +637,7 @@ color: #2e2f42;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-left: auto;
 }
 .footer-form-title {
     margin: 0;
@@ -665,10 +669,10 @@ color: #2e2f42;
     letter-spacing: 0.04em;
     color: #ffffff;
     outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-input:focus {
-    border-color: #4d5ae5;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    border-color: #31d0aa;
 }
 .footer-form-input::placeholder {
     color: #ffffff;
@@ -754,7 +758,7 @@ position: relative;
 }
 .modal-icon {
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 12px;
     transform: translateY(-50%);
     width: 18px;
@@ -766,7 +770,6 @@ position: relative;
 }
 
 .modal-input:focus {
-    outline: none;
     border-color: #4d5ae5;
 }
 
@@ -816,13 +819,18 @@ position: relative;
     border: 1px solid #8e8f99;
     border-radius: 4px;
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
     width: 100%;
+    height: 40px;
+    background-color: transparent;
+
 }
 .modal-comment {
+    width: 100%;
+    margin-top: 4px;
     resize: none;
     font-size: 12px;
     line-height: 1.17;
@@ -830,8 +838,19 @@ position: relative;
     min-height: 120px;
     max-height: 200px;
     border-radius: 4px;
-    padding: 12px 16px;
+    padding: 8px 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    color: #2e2f42;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.modal-comment:focus{
+    border-color: #4d5ae5;
+}
+.modal-comment::placeholder {
+    color: rgba(46, 47, 66, 0.4);
+}
+
 .modal-label-checkbox {
     display: flex;
     align-items: center;
