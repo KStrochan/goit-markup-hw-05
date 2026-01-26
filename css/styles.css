@@ -739,7 +739,7 @@ color: #2e2f42;
 .modal-close-button:hover,
 .modal-close-button:focus {
     background-color: #404BBF;
-    border: 1px dashed #9747ff;
+    border-color: #404BBF;
 }
 .modal-close-icon {
     fill: #2e2f42;
@@ -757,7 +757,7 @@ color: #2e2f42;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    display: flex;
+    display: block;
     flex-direction: column;
     gap: 8px;
 }
@@ -794,9 +794,9 @@ position: relative;
     align-items: center;
     justify-content: center;
     padding: 15px;
-    visibility: hidden;
+    /* visibility: hidden;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none; */
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-hidden.is-open {
@@ -805,7 +805,7 @@ position: relative;
     pointer-events: all;
 }
 .modal-field {
-    /* margin-bottom: 8px; */
+    margin-bottom: 16px;
     display: flex;
     flex-direction: column;
 }
@@ -884,9 +884,10 @@ position: relative;
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    margin-top: 16px;
     margin-bottom: 24px;
 }
-.modal-checkbox {
+/* .modal-checkbox {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -895,7 +896,14 @@ position: relative;
     padding: 0;
     clip : rect(0 0 0 0);
     overflow: hidden;
+} */
+
+.visually-hidden:checked + .modal-checkbox-custom {
+    background-color: #4d5ae5;
+    border-color: #4d5ae5;
+    fill: #ffffff;
 }
+
 .modal-checkbox-custom {
     width: 16px;
     height: 16px;
